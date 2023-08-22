@@ -3,10 +3,11 @@ import React from 'react'
 
 const CartWidget = () => {
   return (
-    <div>
-      <span class="material-symbols-outlined">
+    <div className='flex flex-row place-items-end gap-x-1.5 bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm'>
+      <span className="material-symbols-outlined basis-1/2">
         shopping_cart
-      </span> 
+      </span>
+      <h2 className='basis-1/2'>7</h2> 
     </div>
   )
 }
