@@ -5,9 +5,9 @@ const Cart = () => {
   return (
     <div>
       
-      Mi carrshito
+      Mi carrito
 
-      {cart.length > 0 ? <Form /> : <button>Regresa a la pantalla principal</button>}
+      {/* {cart.length > 0 ? <Form /> : <button>Regresa a la pantalla principal</button>} */}
 
     </div>
   )
