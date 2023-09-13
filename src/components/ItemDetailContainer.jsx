@@ -1,12 +1,8 @@
 import {useEffect, useState} from "react"
-import { useParams } from "react-router-dom"
-import ItemCount from './ItemCount'
-import ItemList from './ItemList'
+import ItemDetail from './ItemDetail'
 
 
-const ItemListContainer = () => {
-
-    const {category} = useParams()
+const ItemDetailContainer = () => {
 
     const getProducts = async () => {
         const response = await fetch("https://fakestoreapi.com/products")
@@ -15,21 +11,21 @@ const ItemListContainer = () => {
         return data
     }
         
+    //ESTADO INICIAL DEL ARRAY
     const [product, setProduct] = useState([])
     
+    //PROMESA PARA SETEARLE A PRODUCT LO QUE VENGA DE LA API
     useEffect(()=>{
         getProducts().then((product)=>setProduct(product))
     },[])
 
-    const filteredProducts = product.filter((p)=> p.category === category)
-
     return (
         <div className='flex flex-row flex-wrap justify-center'>
-            {
-                category ? <ItemList product={filteredProducts} /> : <ItemList product={product} />
-            }
+            <ItemDetail 
+                product={product}
+            />
         </div>
     )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer

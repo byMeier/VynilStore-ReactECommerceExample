@@ -5,3 +5,8 @@
 h1, span, button{
     color:black;
 }
+
+imgSize{
+    width:10%;
+    height: 10%;
+}
