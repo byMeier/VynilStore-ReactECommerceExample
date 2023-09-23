@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
-import ItemCount from './ItemCount'
 import ItemList from './ItemList'
+import Loader from "./Loader"
 
 
 const ItemListContainer = () => {
@@ -16,17 +16,19 @@ const ItemListContainer = () => {
     }
         
     const [product, setProduct] = useState([])
-    
+
     useEffect(()=>{
         getProducts().then((product)=>setProduct(product))
     },[])
+
+
 
     const filteredProducts = product.filter((p)=> p.category === category)
 
     return (
         <div className='flex flex-row flex-wrap justify-center'>
             {
-                category ? <ItemList product={filteredProducts} /> : <ItemList product={product} />
+                product.length === 0 ? <Loader/> : category ? <ItemList product={filteredProducts} /> : <ItemList product={product} />
             }
         </div>
     )

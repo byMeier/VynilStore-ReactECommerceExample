@@ -1,13 +1,23 @@
 import React from 'react'
+import { useContext } from 'react'
+import { CartContext } from '../context/ShoppingCartContext'
 
 const Cart = () => {
-  const cart = [1]
+
+  const {cart, setCart, comision} = useContext(CartContext)
+
+
   return (
     <div>
       
       Mi carrito
 
-      {/* {cart.length > 0 ? <Form /> : <button>Regresa a la pantalla principal</button>} */}
+      {comision}
+
+      {cart.length > 0 ? 
+      <Form /> 
+      : 
+      <button>Regresa a la pantalla principal</button>}
 
     </div>
   )

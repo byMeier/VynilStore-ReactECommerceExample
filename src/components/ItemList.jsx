@@ -1,5 +1,12 @@
-import React from 'react'
+import React from 'react' //SI SE USA REACT.MEMO NUNCA BORRAR ESTE IMPORT
 import Item from './Item'
+
+//React.memo???
+/* Almacena informacion de props que ya ha sido mostrada en alguna oportunidad
+SOBRE TODO CUANDO SE TIRE UN MAP O LLAMADO DE DATOS*/
+
+
+
 
 const ItemList = ({ product }) => {
 
@@ -19,4 +26,4 @@ const ItemList = ({ product }) => {
   )
 }
 
-export default ItemList
+export default React.memo(ItemList)
