@@ -26,18 +26,18 @@ const NavBar = () => {
                         </MenuButton>
                         <MenuList className='z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
                             <MenuItem className='text-gray-700 block px-4 py-2 text-sm hover:bg-gray-50'>
-                                <Link to={`/category/${"men's clothing"}`}>
-                                    Ropa de Hombre
+                                <Link to={`/category/${"vynil"}`}>
+                                    Vinilos 
                                 </Link>
                                 </MenuItem>
                             <MenuItem className='text-gray-700 block px-4 py-2 text-sm hover:bg-gray-50'>
-                                <Link to={`/category/${"women's clothing"}`}>
-                                    Ropa de Mujer
+                                <Link to={`/category/${"cd"}`}>
+                                    CD's
                                 </Link>
                             </MenuItem>
                             <MenuItem className='text-gray-700 block px-4 py-2 text-sm hover:bg-gray-50'>
-                                <Link to={`/category/${"electronics"}`}>
-                                    Electrónica
+                                <Link to={`/category/${"merch"}`}>
+                                    Merch
                                 </Link>    
                             </MenuItem>
                         </MenuList>

@@ -1,12 +1,10 @@
 import { useState, createContext } from "react"
 
-export const CartContext = createContext
+export const CartContext = createContext()
 
 const ShoppingCartProvider = ({children}) => {
 
     const [cart, setCart] = useState([])
-
-    const comision = "React en Coderhouse"
 
 //Agregar elementos al carrito
 //Eliminar
@@ -18,7 +16,7 @@ const ShoppingCartProvider = ({children}) => {
   return (
     <div>
 
-        <CartContext.Provider value={{cart, setCart, comision}}>
+        <CartContext.Provider value={{cart, setCart}}>
 
             {children}
 
