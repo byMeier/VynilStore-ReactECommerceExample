@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import {collection, addDoc, getFirestore} from "firebase/firestore"
 
-const Form = () => {
+const Checkout = () => {
 
     const [nombre, setNombre] = useState("")
     const [email, setEmail] = useState("")
@@ -47,4 +47,4 @@ return (
 )
 }
 
-export default Form
+export default Checkout

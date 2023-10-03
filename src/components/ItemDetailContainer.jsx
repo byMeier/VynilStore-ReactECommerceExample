@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react"
 import { doc, getDoc, getFirestore } from 'firebase/firestore'
 import ItemDetail from './ItemDetail'
-
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
 
@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() =>{
         const db = getFirestore()
-        const oneItem = doc(db, "product", `${id}`)
+        const oneItem = doc(db, "product", id)
         getDoc(oneItem).then((snapshot)=>{
             if(snapshot.exists()){
                 const docs = snapshot.data()
