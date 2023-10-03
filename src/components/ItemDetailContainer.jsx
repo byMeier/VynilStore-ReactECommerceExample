@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() =>{
         const db = getFirestore()
-        const oneItem = doc(db, "product", id)
+        const oneItem = doc(db, "product", `${id}`)
         getDoc(oneItem).then((snapshot)=>{
             if(snapshot.exists()){
                 const docs = snapshot.data()
@@ -39,6 +39,7 @@ const ItemDetailContainer = () => {
         <div className='flex flex-row flex-wrap justify-center'>
             <ItemDetail 
                 product={product}
+                id={id}
             />
         </div>
     )

@@ -44,9 +44,8 @@ const NavBar = () => {
                     </Menu>
                 </Box>
                 <div className='flex m-[15px] self-end '>
-                    <Link to={"/cart"}>
+                    
                         <CartWidget/>
-                    </Link>
                     
                 </div>
             </div>

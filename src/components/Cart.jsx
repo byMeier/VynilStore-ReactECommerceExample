@@ -5,7 +5,7 @@ import { CartContext } from '../context/ShoppingCartContext'
 
 const Cart = () => {
 
-  const {cart, clearCart, total} = useContext(CartContext)
+  const {cart, onClear, subTotal} = useContext(CartContext)
 
 if(cart.length === 0){
   return(
@@ -19,24 +19,40 @@ if(cart.length === 0){
 }
 
   return (
-    <div>   
-          <div className='flex flex-column flex-nowrap' key={product.id}>
+    <>
+    {
+      cart.map((p)=>
+        <div>   
+          <div className='flex flex-column flex-nowrap' key={p.id}>
             <div>
-                <img className='m-10 w-64' src={product.image} alt="" />
+                <img className='m-10 w-64' src={p.image} alt="" />
             </div>
             <div className='flex flex-col flex-nowrap self-center w-96'>
-                <h1 className='font-semibold'>{product.title}</h1>
-                <p className='font-bold text-lime-700'>$ {product.price}</p>
+                <h1 className='font-semibold'>{p.title}</h1>
+                <p className='font-bold text-lime-700'>$ {p.price}</p>
+            </div>
+            <div>
+              <h1>{p.quantity}</h1>
             </div>
           </div>
-          <div>
-            <button onClick={clearCart}>Limpiar Carrito</button>
+        </div>
+      )
+    }
+
+        <div>
+            <button onClick={onClear}>Limpiar Carrito</button>
           </div>
           <div>
-            <p>Su total es: ${total()}</p>
+            <p>Su total es: ${subTotal.toFixed(2)}</p>
           </div>
-    </div>
+          <div>
+          <Link to="/checkout">
+            <button>Comprar</button>
+          </Link>
+        </div>
+    </>
   )
+
 }
 
 export default Cart

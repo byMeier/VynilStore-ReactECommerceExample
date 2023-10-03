@@ -1,8 +1,10 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import {collection, addDoc, getFirestore} from "firebase/firestore"
+import { CartContext } from '../context/ShoppingCartContext'
 
 const Checkout = () => {
 
+    const {cart} = useContext(CartContext)
     const [nombre, setNombre] = useState("")
     const [email, setEmail] = useState("")
     const [orderId, setOrderId] = useState(null)
@@ -22,8 +24,8 @@ const order = {
     buyer:{
         nombre, email
     },
-    items: cart.map(({id, nombre, precio}) => ({
-        id, nombre, precio
+    items: cart.map(({id, title, price}) => ({
+        id, title, price
     }))
     
 }
@@ -37,8 +39,9 @@ return (
         <form onSubmit={handleSubmit}>
 
             <input type="text" placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} />
-            <input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)} /> 
             <button type='submit'>Comprar</button>
+
 
         </form>
 
