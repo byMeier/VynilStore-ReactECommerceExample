@@ -3,9 +3,9 @@
 
 <img src="./src/assets/img/logo.png" alt="Logo Vynil Store" />
 
- Ejemplo de sitio web E-Commerce de merchandising de música (CDs, Vinilos, etc.). Desarrollado con React.js, JSX, HTML5, CSS3, Node.js, Chakra UI, Tailwind CSS y GIT. Photoshop CS6 para diseños y Vite JS para ejecución.
+ Ejemplo de sitio web E-Commerce de merchandising de música (CDs, Vinilos, etc.). Desarrollado con React.js, JSX, HTML5, CSS3, Node.js, Chakra UI, Tailwind CSS, GIT y la base de datos de Firebase de Google. Photoshop CS6 para diseños y Vite JS para ejecución.
 
-Example of an E-Commerce website for music merchandising (CDs, Vinyl, etc.). Developed with React.js, JSX, HTML5, CSS3, Node.js, Chakra UI, Tailwind CSS and GIT. Photoshop CS6 for designs and Vite JS for execution.
+Example of an E-Commerce website for music merchandising (CDs, Vinyl, etc.). Developed with React.js, JSX, HTML5, CSS3, Node.js, Chakra UI, Tailwind CSS, GIT and Google Firebase database. Photoshop CS6 for designs and Vite JS for execution.
 
 <h3><bold><em>GIF Presentación / GIF Presentation</h3></bold></em>
 
