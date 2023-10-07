@@ -12,21 +12,21 @@ const App = () => {
 
   return (
     <ShoppingCartContext>
-    <BrowserRouter>
+      <BrowserRouter>
 
-      <NavBar/>
-      
-      <Routes>
+        <NavBar/>
 
-          <Route exact path="/" element={<ItemListContainer />} />
-          <Route exact path="/cart" element={<Cart />} />
-          <Route exact path="/checkout" element={<Checkout />} />
-          <Route path='/category/:category' element={<ItemListContainer/>} />
-          <Route exact path="/item/:id" element={<ItemDetailContainer />} />
+        <Routes>
 
-      </Routes>
+            <Route exact path="/" element={<ItemListContainer />} />
+            <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/checkout" element={<Checkout />} />
+            <Route path='/category/:category' element={<ItemListContainer/>} />
+            <Route exact path="/item/:id" element={<ItemDetailContainer />} />
 
-    </BrowserRouter>
+        </Routes>
+
+      </BrowserRouter>
     </ShoppingCartContext>
   )
 }

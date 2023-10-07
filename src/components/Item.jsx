@@ -7,17 +7,17 @@ console.log(producto)
 
 return (
     <>
-        <div className='flex flex-row flex-wrap items-center justify-center border rounded p-2 m-2 shadow-lg w-96 h-112' key={producto.id}>
-            <div>
-                <img className='m-10 w-64' src={producto.image}/>
-            </div>
-            <h2 className='font-medium'>Título: {producto.title}</h2>
-            <button className='font-semibold z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hover:bg-gray-50'>
-                <Link to={`/item/${producto.id}`}>
-                    Agregar al Carrito
+        
+            <div className='flex flex-row flex-wrap items-center justify-center border rounded p-2 m-2  shadow-md w-96 h-112' key={producto.id}>
+            <Link to={`/item/${producto.id}`}>
+                <div>
+                    <img className='m-10 w-64 transition duration-200 ease-in-out hover:scale-125' src={producto.image}/>
+                </div>
+                <h2 className='font-medium text-xl text-center w-full'>{producto.title}</h2>
+                <h3 className='font-light text-md text-center w-full'>Ver Más</h3>
                 </Link>
-            </button>
-        </div>
+            </div>
+        
     </>
 )
 }

@@ -10,3 +10,18 @@ imgSize{
     width:10%;
     height: 10%;
 }
+
+.bg-creamy.flex.w-full {
+    position: sticky;
+    top: 0;
+    z-index: 49;
+    margin-bottom: 25px;
+  }
+
+body{
+    margin-bottom: 100px;
+}
+
+html{
+  height: 100%;
+}

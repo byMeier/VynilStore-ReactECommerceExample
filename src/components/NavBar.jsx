@@ -11,42 +11,43 @@ import {
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
+
     return (
         <>  
-            <div className='flex shadow-md h-[65px]'>
-            <Link to={"/"}>
-                <div className='m-[14px]'>
-                    <h1 className='text-3xl font-bold'>Vynil Store</h1>
-                </div>
-            </Link>
-                <Box>
-                    <Menu>
-                        <MenuButton className='flex mt-[15px] place-self-center inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50'>
-                            Categorías
-                        </MenuButton>
-                        <MenuList className='z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
-                            <MenuItem className='text-gray-700 block px-4 py-2 text-sm hover:bg-gray-50'>
+            <div className="bg-creamy flex w-full shadow-md">
+                <Link to={"/"}>
+                    <div className='m-[14px]'>
+                        <img className="delay-300 hover:drop-shadow-lg" src="../src/assets/img/logo.png" alt="Logo" width="150px"/>
+                    </div>
+                </Link>
+                <div className='flex justify-between w-full'>
+                    <Box className='self-start self-center'>
+                        <Menu>
+                            <MenuButton className='flex inline-flex w-full gap-x-1.5 rounded-md ring-transparent bg-bluely px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-sbluely'>
+                                Music & Appareal
+                            </MenuButton>
+                            <MenuList className='z-10 mt-2 w-56 origin-top-right rounded-md bg-bluely shadow-lg  ring-transparent  focus:outline-none'>
                                 <Link to={`/category/${"vynil"}`}>
-                                    Vinilos 
+                                    <MenuItem className='text-gray-700 block px-4 py-2 text-sm rounded-md hover:bg-sbluely'>
+                                        Vinyl
+                                    </MenuItem>
                                 </Link>
-                                </MenuItem>
-                            <MenuItem className='text-gray-700 block px-4 py-2 text-sm hover:bg-gray-50'>
                                 <Link to={`/category/${"cd"}`}>
-                                    CD's
+                                    <MenuItem className='text-gray-700 block px-4 py-2 text-sm rounded-md hover:bg-sbluely'>
+                                            CD
+                                    </MenuItem>
                                 </Link>
-                            </MenuItem>
-                            <MenuItem className='text-gray-700 block px-4 py-2 text-sm hover:bg-gray-50'>
                                 <Link to={`/category/${"merch"}`}>
-                                    Merch
-                                </Link>    
-                            </MenuItem>
-                        </MenuList>
-                    </Menu>
-                </Box>
-                <div className='flex m-[15px] self-end '>
-                    
-                        <CartWidget/>
-                    
+                                    <MenuItem className='text-gray-700 block px-4 py-2 text-sm rounded-md hover:bg-sbluely'>
+                                            Merch
+                                    </MenuItem>
+                                </Link>   
+                            </MenuList>
+                        </Menu>
+                    </Box>
+                    <div className='flex justify-end '>
+                            <CartWidget/>
+                    </div>
                 </div>
             </div>
         </>

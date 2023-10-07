@@ -20,12 +20,11 @@ return (
     <>
         <div className='mt-2 w-56 origin-top-right'>
             <div className='flex flex-row flex-nowrap m-auto'>
-                <button className='z-10 mt-2 mr-2 w-6 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hover:bg-gray-50' onClick={sumar}>+</button>
-                <p className=' flex content-center place-content-center z-10 mt-2 mr-2 w-6 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none '>{contador}</p>
-                <button className='z-10 mt-2 w-6 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hover:bg-gray-50' onClick={restar}>-</button>
+                <button className='font-semibold z-10 mr-2 mt-2 w-20 h-10 origin-top-right rounded-md bg-bluely focus:outline-none hover:bg-sbluely' onClick={sumar}>+</button>
+                <p className='font-semibold z-10 mt-2 mr-2 w-56 h-10 origin-top-right rounded-md bg-creamy focus:outline-none text-center p-2'>{contador}</p>
+                <button className='font-semibold z-10 mt-2 w-20 h-10 origin-top-right rounded-md bg-bluely focus:outline-none hover:bg-sbluely' onClick={restar}>-</button>
             </div>
-
-            <button className='z-10 mt-2 w-24 p-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hover:bg-gray-50' onClick={()=>onAdd(contador)}>Agregar al Carrito</button>
+            <button className='font-semibold z-10 mt-2 w-56 h-10 origin-top-right rounded-md bg-bluely focus:outline-none hover:bg-sbluely' onClick={()=>onAdd(contador)}>Agregar al Carrito</button>
         </div>
     </>
 )

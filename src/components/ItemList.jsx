@@ -1,11 +1,5 @@
-import React from 'react' //SI SE USA REACT.MEMO NUNCA BORRAR ESTE IMPORT
+import React from 'react' 
 import Item from './Item'
-
-//React.memo???
-/* Almacena informacion de props que ya ha sido mostrada en alguna oportunidad
-SOBRE TODO CUANDO SE TIRE UN MAP O LLAMADO DE DATOS*/
-
-
 
 
 const ItemList = ({ product }) => {
