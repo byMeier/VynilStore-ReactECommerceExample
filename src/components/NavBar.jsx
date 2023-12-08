@@ -17,7 +17,7 @@ const NavBar = () => {
             <div className="bg-creamy flex w-full shadow-md">
                 <Link to={"/"}>
                     <div className='m-[14px]'>
-                        <img className="delay-300 hover:drop-shadow-lg" src="../src/assets/img/logo.png" alt="Logo" width="150px"/>
+                        <img className="delay-300 hover:drop-shadow-lg" src="../img/logo.png" alt="Logo" width="150px"/>
                     </div>
                 </Link>
                 <div className='flex justify-between w-full'>
